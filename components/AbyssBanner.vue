@@ -1,6 +1,6 @@
 <template>
-  <!-- todo 进行页面跳转 -->
-  <div class="abyss-banner-box">
+  <!-- TODO: 需要一个 page transition  -->
+  <NuxtLink :to="`/floor/${props.floor}`" class="abyss-banner-box">
     <img class="floor-bg" alt="floor-bg" src="/bg/floor-banner.webp" />
     <div class="floor-info">
       <div class="abyss-floor">
@@ -11,10 +11,9 @@
         <span>Some text here</span>
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 <script setup lang="ts">
-
 interface AbyssBannerProps {
   floor: number
 }
@@ -28,15 +27,16 @@ const props = defineProps<AbyssBannerProps>()
   align-items: center;
   justify-content: space-between;
   aspect-ratio: 3 / 8;
-  width: 120px;
+  width: 150px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .floor-bg {
   position: absolute;
   width: 100%;
-  height: 100%;
   filter: brightness(0.5) grayscale(1);
+  transition: filter .3s ease-in-out;
 }
 
 .abyss-banner-box:hover .floor-bg {
@@ -44,11 +44,12 @@ const props = defineProps<AbyssBannerProps>()
 }
 
 .floor-info {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 50% 0;

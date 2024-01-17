@@ -23,7 +23,6 @@ const floors = [9, 10, 11, 12]
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #0D0E1E; /* todo 这部分做成渐变色 */
 }
 
 .index-header {
@@ -31,11 +30,12 @@ const floors = [9, 10, 11, 12]
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .index-header img {
   width: 100px;
+  margin-bottom: 50px;
   aspect-ratio: 1;
 }
 
