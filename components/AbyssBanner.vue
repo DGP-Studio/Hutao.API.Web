@@ -7,9 +7,6 @@
         <img alt="floor" src="/bg/floor-num-bg.webp" />
         <span>{{ props.floor }}</span>
       </div>
-      <div class="abyss-info">
-        <span>Some text here</span>
-      </div>
     </div>
   </NuxtLink>
 </template>
@@ -37,6 +34,7 @@ const props = defineProps<AbyssBannerProps>()
   width: 100%;
   filter: brightness(0.5) grayscale(1);
   transition: filter .3s ease-in-out;
+  object-fit: cover;
 }
 
 .abyss-banner-box:hover .floor-bg {
@@ -73,20 +71,6 @@ const props = defineProps<AbyssBannerProps>()
 .abyss-floor span {
   position: relative;
   font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.abyss-info {
-  height: 10%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.abyss-info span {
-  font-size: 12px;
   font-weight: bold;
   color: #fff;
 }

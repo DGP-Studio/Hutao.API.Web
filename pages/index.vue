@@ -45,10 +45,25 @@ const floors = [9, 10, 11, 12]
 }
 
 .floor-banner {
-  width: 100%;
-  max-width: 1140px;
+  max-width: 100%;
+  width: fit-content;
   display: flex;
   align-items: center;
+  column-gap: 8vw;
   justify-content: space-between;
+}
+</style>
+<!-- 响应式 -->
+<style lang="css" scoped>
+@media screen and (max-width: 768px) {
+  .index-header span {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .index-header span {
+    font-size: 1rem;
+  }
 }
 </style>
