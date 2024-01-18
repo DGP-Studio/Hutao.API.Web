@@ -13,8 +13,14 @@
 </template>
 <script setup lang="ts">
 import AbyssBanner from '~/components/AbyssBanner.vue'
+import { getAbyssOverview } from '~/composables/getAbyssData'
 
 const floors = [9, 10, 11, 12]
+
+onMounted(async () => {
+  const data = await getAbyssOverview();
+  console.log(data)
+})
 </script>
 <style lang="css" scoped>
 .index-page {

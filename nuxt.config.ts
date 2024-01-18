@@ -11,6 +11,15 @@ export default defineNuxtConfig({
     }
   },
   devtools: { enabled: true },
+  nitro: {
+    devProxy: {
+      '/api': {
+        target: 'https://homa.snapgenshin.com/Statistics',
+        changeOrigin: true,
+        prependPath: true
+      }
+    }
+  },
   vite: {
     plugins: [vuetify()]
   }
